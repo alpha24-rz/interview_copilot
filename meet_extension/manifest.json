@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Alpha Global Meeting Copilot Connector",
+  "version": "2.0",
+  "description": "Menghubungkan subtitle otomatis dari Google Meet, Zoom Web, dan Microsoft Teams ke Alpha Teleprompter",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://meet.google.com/*",
+        "https://*.zoom.us/*",
+        "https://teams.microsoft.com/*",
+        "https://teams.live.com/*",
+        "https://*.webex.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
